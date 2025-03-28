@@ -1,7 +1,12 @@
 name: QR_codedly
 
 on:
-  [workflow_dispatch]
+  push:
+    branches:
+      - main
+    paths:
+      - 'api/Dockerfile'
+      - 'front-end-nextjs'
 
 jobs:
   publish_images:
